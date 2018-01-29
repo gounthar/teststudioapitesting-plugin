@@ -1,0 +1,39 @@
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+    <f:block>
+        <f:entry title="${%apiRunnerPath}" field="apiRunnerPath">
+            <f:textbox />
+        </f:entry>
+
+        <f:entry title="${%project}" field="project">
+            <f:textbox />
+        </f:entry>
+
+        <f:entry title="${%test}" field="test">
+            <f:textarea />
+        </f:entry>
+
+        <f:entry title="${%testAsUnit}" field="testAsUnit">
+            <f:checkbox />
+        </f:entry>
+
+        <f:advanced>
+            <f:block>
+                <f:entry title="${%dontSaveContexts}" field="dontSaveContexts">
+                    <f:checkbox />
+                </f:entry>
+                <f:entry title="${%startFrom}" field="startFrom">
+                    <f:textbox />
+                </f:entry>
+                <f:entry title="${%stopAfter}" field="stopAfter">
+                    <f:textbox />
+                </f:entry>
+                <f:entry title="${%variable}" field="variable">
+                    <f:textarea />
+                </f:entry>
+            </f:block>
+        </f:advanced>
+
+    </f:block>
+</j:jelly>
