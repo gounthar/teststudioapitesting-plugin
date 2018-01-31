@@ -1,4 +1,4 @@
-package org.jenkinsci.plugins;
+package org.jenkinsci.plugins.teststudioapitesting;
 
 import hudson.Extension;
 import hudson.FilePath;
@@ -23,14 +23,11 @@ import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static org.jenkinsci.plugins.Constants.LIST;
-import static org.jenkinsci.plugins.Constants.TELERIK_API_TESTING_RUNNER_EXE;
-import static org.jenkinsci.plugins.Constants.TEST;
-import static org.jenkinsci.plugins.Utils.fileExists;
-import static org.jenkinsci.plugins.Utils.isEmpty;
+import static org.jenkinsci.plugins.teststudioapitesting.Constants.TELERIK_API_TESTING_RUNNER_EXE;
+import static org.jenkinsci.plugins.teststudioapitesting.Utils.isEmpty;
 
 @SuppressWarnings("unused")
-public class TestBuilder extends Builder implements SimpleBuildStep, Serializable {
+public class TestStudioAPITestBuilder extends Builder implements SimpleBuildStep, Serializable {
 
     private static final long serialVersionUID = 82342459898912L;
 
@@ -46,7 +43,7 @@ public class TestBuilder extends Builder implements SimpleBuildStep, Serializabl
 
 
     @DataBoundConstructor
-    public TestBuilder(String apiRunnerPath,
+    public TestStudioAPITestBuilder(String apiRunnerPath,
                        String project,
                        String test,
                        String startFrom,
@@ -267,11 +264,11 @@ public class TestBuilder extends Builder implements SimpleBuildStep, Serializabl
         @SuppressWarnings("unused")
         public FormValidation doCheckapiRunnerPath(@QueryParameter String apiRunnerPath) throws IOException, ServletException {
             if (isEmpty(apiRunnerPath)) {
-                return FormValidation.error(Messages.TestBuilder_DescriptorImpl_errors_zero_apiStudioTestRunnerPath());
+                return FormValidation.error(Messages.TestStudioAPITestBuilder_DescriptorImpl_errors_zero_apiStudioTestRunnerPath());
             } else {
                 File f = new File(apiRunnerPath);
                 if (!f.exists()) {
-                    return FormValidation.error(Messages.TestBuilder_DescriptorImpl_errors_notFound_apiStudioTestRunnerPath());
+                    return FormValidation.error(Messages.TestStudioAPITestBuilder_DescriptorImpl_errors_notFound_apiStudioTestRunnerPath());
                 }
             }
             return FormValidation.ok();
@@ -284,7 +281,7 @@ public class TestBuilder extends Builder implements SimpleBuildStep, Serializabl
 
         @Override
         public String getDisplayName() {
-            return Messages.TestBuilder_DescriptorImpl_DisplayName();
+            return Messages.TestStudioAPITestBuilder_DescriptorImpl_DisplayName();
         }
 
     }

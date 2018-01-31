@@ -1,4 +1,4 @@
-package org.jenkinsci.plugins;
+package org.jenkinsci.plugins.teststudioapitesting;
 
 public class Constants {
     public static final String TEST = "mttest";
