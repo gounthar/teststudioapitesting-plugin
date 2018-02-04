@@ -84,7 +84,7 @@ public class TestStudioAPITestBuilder extends Builder implements SimpleBuildStep
     }
 
 
-    class MyCallable implements Callable<String, IOException> {
+    static class MyCallable implements Callable<String, IOException> {
         private static final long serialVersionUID = 439832542381L;
 
         private String workspace;
