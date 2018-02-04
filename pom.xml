@@ -8,6 +8,7 @@
         <relativePath />
     </parent>
     <artifactId>teststudioapitesting</artifactId>
+    <groupId>org.jenkins-ci.plugins</groupId>
     <version>1.0.1</version>
     <packaging>hpi</packaging>
     <properties>
@@ -15,7 +16,7 @@
     </properties>
     <name>Progress TestStudio for API Plugin</name>
     <description>Progress TestStudio for API Plugin</description>
-    <url>https://wiki.jenkins-ci.org/display/JENKINS/TODO+Plugin</url>
+    <url>https://wiki.jenkins.io/display/JENKINS/Progress+TestStudio+for+API+Plugin</url>
     <licenses>
         <license>
             <name>MIT License</name>
@@ -29,13 +30,11 @@
             <email>telerik.testing@progress.com</email>
         </developer>
     </developers>
-    <!-- Assuming you want to host on @jenkinsci:
     <scm>
-        <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
-        <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
+        <connection>scm:git:git://github.com/jenkinsci/teststudioapitesting-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:jenkinsci/teststudioapitesting-plugin.git</developerConnection>
+        <url>https://github.com/jenkinsci/teststudioapitesting-plugin</url>
     </scm>
-    -->
     <repositories>
         <repository>
             <id>repo.jenkins-ci.org</id>
