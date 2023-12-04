@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>2.33</version>
+        <version>4.51</version>
         <relativePath />
     </parent>
     <artifactId>teststudioapitesting</artifactId>
@@ -12,7 +12,7 @@
     <version>1.0.2-SNAPSHOT</version>
     <packaging>hpi</packaging>
     <properties>
-        <jenkins.version>2.7.3</jenkins.version>
+        <jenkins.version>2.346.3</jenkins.version>
     </properties>
     <name>Progress TestStudio for API Plugin</name>
     <description>Progress TestStudio for API Plugin</description>
